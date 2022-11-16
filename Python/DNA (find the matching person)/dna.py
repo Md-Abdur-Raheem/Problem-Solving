@@ -71,7 +71,7 @@ def find_matched(STR, person):
 
 
 def longest_match(sequence, subsequence):
-    """Returns length of longest run of subsequence in sequence."""
+    """Returns length of the longest run of subsequence in sequence."""
 
     # Initialize variables
     longest_run = 0
@@ -104,7 +104,7 @@ def longest_match(sequence, subsequence):
         # Update most consecutive matches found
         longest_run = max(longest_run, count)
 
-    # After checking for runs at each character in seqeuence, return longest run found
+    # After checking for runs at each character in the sequence, return longest run found
     return longest_run
 
 
