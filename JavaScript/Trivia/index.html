@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script>
+        // TODO: Add code to check answers to questions
+        const ans1 = "1 person per 6 sheep";
+        const ans2 = "switzerland";
+
+        function checkAnswer1(e) {
+            const id = e.target.id;
+            const text = document.getElementById("text1");
+            const value = document.getElementById(id).innerText;
+
+            if (value == ans1) {
+                document.getElementById(id).style.backgroundColor = "green";
+                document.getElementById(id).style.color = "white";
+                text.innerText = "Correct";
+                text.style.color = "green";
+                text.style.fontWeight = "bold";
+
+            }
+            else {
+                document.getElementById(id).style.backgroundColor = "red";
+                document.getElementById(id).style.color = "white";
+                text.innerText = "Incorrect";
+                text.style.color = "red";
+                text.style.fontWeight = "bold";
+            }
+        }
+
+        function checkAnswer2(e) {
+            const text = document.getElementById("text2");
+            const textField = document.getElementById("box");
+            const value = textField.value;
+
+            if (value.toLowerCase() == ans2) {
+                textField.style.backgroundColor = "green";
+                textField.style.color = "white";
+                text.innerText = "Correct";
+                text.style.color = "green";
+                text.style.fontWeight = "bold";
+            }
+            else {
+                textField.style.backgroundColor = "red";
+                textField.style.color = "white";
+                text.innerText = "Incorrect";
+                text.style.color = "red";
+                text.style.fontWeight = "bold";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <!-- TODO: Add multiple choice question here -->
+            <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
+            <p id="text1"></p>
+            <br>
+            <button type="button" onClick="checkAnswer1(event)" id="option1">6 people per 1
+                sheep</button>
+            <button type="button" onClick="checkAnswer1(event)" id="option2">3 people per 1
+                sheep</button>
+            <button type="button" onClick="checkAnswer1(event)" id="option3">1 person per 1
+                sheep</button>
+            <button type="button" onClick="checkAnswer1(event)" id="option4">1 person per 3
+                sheep</button>
+            <button type="button" onClick="checkAnswer1(event)" id="option5">1 person per 6
+                sheep</button>
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <!-- TODO: Add free response question here -->
+            <h3>In which country is it illegal to own only one guinea pig, as a long guinea pig might get lonely?</h3>
+            <p id="text2"></p>
+            <input type="text" id="box" />
+            <button onClick="checkAnswer2(event)">Check Answer</button>
+        </div>
+    </div>
+</body>
+
+</html>

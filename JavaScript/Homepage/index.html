@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Book Pro!</title>
+
+    <!---------- CSS Link ---------->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!---------- Bootstrap CSS Link ---------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <!---------- Main Section ---------->
+
+    <main class="d-flex justify-content-center mx-auto mt-5">
+
+        <!-- top image -->
+        <img class="product-image" src="./mac.jpeg" alt="">
+
+        <!-- info sectioo -->
+        <section class="info-section">
+            <div>
+                <h1>Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
+                <p>Apple M1 chip with 8-core CPU with 4 perfomance cores and 4 effficiency cores, 7-core GPU, and
+                    16-core Neural Engine 8GB unified memory 256 GB storage Two Thunderbolt / USB 4 ports Magic Mouse
+                    Magic Keyboard - US English</p>
+            </div>
+
+            <!-- memeory, storage & delivery -->
+
+            <!-- memeory -->
+            <div class="mt-5">
+                <h6>Memory</h6>
+                <div class="d-flex">
+                    <button id="8-gb-memeory-btn" class="button me-1 rounded" type="button"><span>8 GB unified
+                            memeory</span></button>
+                    <button id="16-gb-memeory-btn" class="button rounded" type="button"><span>16 GB unified
+                            memeory</span></button>
+                </div>
+            </div>
+
+            <!-- storage -->
+            <div class="mt-5">
+                <h6>Storage</h6>
+                <div class="d-flex">
+                    <button id="256-gb-ssd-btn" class="button rounded me-1" type="button"><span>256 GB SSD
+                            Storage</span></button>
+                    <button id="512-gb-ssd-btn" class="button rounded me-1" type="button"><span>512 GB SSD
+                            Storage</span></button>
+                    <button id="1-tb-ssd-btn" class="button rounded" type="button"><span>1 TB SSD
+                            Storage</span></button>
+                </div>
+            </div>
+
+            <!-- delivery -->
+            <div class="mt-5">
+                <h6>Choose your delivery option</h6>
+                <div class="d-flex">
+                    <button id="free-delivery-btn" class="button me-1 rounded" type="button"><span>Aug 25 FREE Prime
+                            Delivery</span></button>
+                    <button id="fast-delivery-btn" class="button rounded" type="button"><span>Aug 21 Delivery charge
+                            $20</span></button>
+                </div>
+            </div>
+
+            <!-- price & total calculation section -->
+
+            <!-- best price -->
+            <div class="mt-5 mb-5">
+                <div class="d-flex mb-0 pb-0">
+                    <h5>Best Price</h5>
+                    <h5>$<span id="best-price">1299</span></h5>
+                </div>
+                <hr style="width: 350px;">
+
+                <!-- extra memory cost -->
+                <div class="d-flex mb-0 pb-0">
+                    <h5>Extra Memory Cost</h5>
+                    <h5>$<span id="memory-cost">0</span></h5>
+                </div>
+                <hr style="width: 350px;">
+
+                <!-- extra storage cost -->
+                <div class="d-flex mb-0 pb-0">
+                    <h5>Extra Storage Cost</h5>
+                    <h5>$<span id="storage-cost">0</span></h5>
+                </div>
+                <hr style="width: 350px;">
+
+                <!-- delivery cost -->
+                <div class="d-flex mb-0 pb-0">
+                    <h5>Delivery Charge</h5>
+                    <h5>$<span id="delivery-cost">0</span></h5>
+                </div>
+                <hr style="width: 350px; border: 1.5px solid black;">
+
+                <!-- total -->
+                <div class="d-flex mb-0 pb-0">
+                    <h5>Total Price</h5>
+                    <h5>$<span id="first-total-price">1299</span></h5>
+                </div>
+                <hr style="width: 350px;">
+
+
+                <!-- promo code -->
+                <h6>Add promo code</h6>
+                <div class="d-flex w-75">
+                    <input id="promo-code" class="form-control w-75 me-2" type="text"
+                        aria-label="default input example">
+                    <button onclick="discountCalculation()" id="promo-btn" type="button"
+                        class="btn btn-danger w-25">Apply</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- total section -->
+    <section>
+        <hr style="width: 50%; margin-left: 500px;">
+        <h1 class="text-center mb-5">Total: $<span id="new-total-price">1299</span></h1>
+    </section>
+
+
+
+    <!-- Bootstrap JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- JavaScript Link -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
